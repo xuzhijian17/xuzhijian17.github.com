@@ -20,7 +20,7 @@ Asm.js通过使用WebGL渲染，能让一个基于C++引擎的游戏运行在Jav
 Asm.js是JavaScript应用程序中的一个新的分类:C/C++应用程序通过JavaScript进行编译。它是整个JavaScript应用程序中的一个新的类型，并由[Mozilla Emscripten 项目](https://github.com/kripken/emscripten)发起。
 
 Emscripten通过LLVM将C/C++代码转换生成LLVM字节码并放在JavaScript中运行（特别说明下，Asm.js是JavaScript的一个子集）。
-![Asm.js Compilation & Execution Pipeline](./1yoy1Fal.png)
+![Asm.js Compilation & Execution Pipeline](./images/1yoy1Fal.png)
 
 如果编译Asm.js代码去做一些执行过程中的渲染的话，那么大部分情况很可能都是通过WebGL来负责实现的（已经渲染的则使用OpenGL来实现）。在这种方法中，整个过程在技术上使用了JavaScript和浏览器，但是几乎绕过了整个真实的，正常的代码执行过程，并获取一个网页中的js渲染路径。
 
